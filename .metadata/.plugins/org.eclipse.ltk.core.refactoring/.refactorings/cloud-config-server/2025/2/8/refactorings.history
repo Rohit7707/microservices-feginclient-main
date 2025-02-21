@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;cloud-config-server/src/main/resources/configurations/employee-service.yml&apos; to &apos;Employee-service.yml&apos;" description="Rename resource &apos;employee-service.yml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/configurations/employee-service.yml" name="Employee-service.yml" stamp="1740080129398" updateReferences="true"/>
+</session>

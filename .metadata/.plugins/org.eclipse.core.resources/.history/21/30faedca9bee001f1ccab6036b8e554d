@@ -1,0 +1,39 @@
+package com.wipro.Employee_service.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="emp_table")
+public class Employee 
+{
+	@Id
+	@Column(name = "id")
+	public Long empId;
+	
+	@Column(name = "empName")
+	public String empName;
+	
+	@Column(name = "username")
+	public String username;
+	
+	@Column(name = "password")
+	public String password;
+	
+	@Column(name = "email")
+	public String email;
+	
+	@Column(name = "phoneNumber")
+	public String phoneNumber;
+	
+	@Column(name = "age")
+	public int age;
+	
+	@Column(name = "pid")
+	public int pid;
+
+}
+

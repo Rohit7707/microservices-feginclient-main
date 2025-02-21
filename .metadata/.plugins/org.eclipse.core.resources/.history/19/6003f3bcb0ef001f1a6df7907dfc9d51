@@ -1,0 +1,49 @@
+package com.wipro.Employee_service.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.wipro.Employee_service.entity.Employee;
+import com.wipro.Employee_service.service.EmployeeService;
+import com.wipro.Project_service.entity.Project;
+
+import io.micrometer.common.lang.Nullable;
+
+@RestController
+@RequestMapping("/employee")
+public class EmployeeController {
+	
+	@Autowired
+	EmployeeService service;
+	
+	@PostMapping
+	public Employee saveEmployee(@Nullable @RequestBody Employee empData)
+	{
+		
+		service.saveEmploye(empData);
+		
+	}
+	
+
+	@GetMapping("/dataById")
+	public ResponseEntity<String> getEmployeesbyId(@Nullable @RequestParam String empId )
+	{
+		Employee emp= service.getEmployeesById(Long.valueOf(empId));
+		return new ResponseEntity<>(emp.toString(),HttpStatus.OK);
+		
+	}
+	
+	@GetMapping("withProject/{pid}")
+	public List<Employee> (@PathVariable Long pid)
+	{
+	        return service.getProject(pid);
+	    }
+
+	
+	
+
+ }

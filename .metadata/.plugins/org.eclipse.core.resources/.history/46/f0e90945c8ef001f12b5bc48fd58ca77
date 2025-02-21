@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:  # ✅ Corrected key (serviceUrl -> service-url)
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 9095
+
+spring:
+  application:
+    name: Employee-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/wipro_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver  # ✅ Ensure correct MySQL driver is used
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect  # ✅ Explicitly set MySQL dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

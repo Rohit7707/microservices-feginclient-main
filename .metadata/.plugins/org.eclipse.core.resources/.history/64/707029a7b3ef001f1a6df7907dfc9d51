@@ -1,0 +1,5 @@
+package com.wipro.Project_service.client;
+
+public class Employee {
+
+}

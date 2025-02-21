@@ -1,0 +1,13 @@
+package com.wipro.Employee_service.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wipro.Employee_service.service.EmployeeService;
+
+@RestController
+@RequestMapping("/employee")
+public class EmployeeController {
+	public EmployeeService service;
+
+ }

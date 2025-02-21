@@ -1,0 +1,37 @@
+package com.wipro.Employee_service.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.wipro.Employee_service.entity.Employee;
+
+@Service
+public class EmployeeService {
+
+	public Employee getEmployeeByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Employee getEmployeesById(Integer valueOf) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void saveEmploye(Employee empData) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteEmployeeById(Integer valueOf) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.wipro.Employee_service.repo;
+
+public interface EmployeeRepo {
+
+}

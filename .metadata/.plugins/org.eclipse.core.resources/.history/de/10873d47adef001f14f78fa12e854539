@@ -1,0 +1,64 @@
+package com.wipro.Employee_service.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wipro.Employee_service.entity.Employee;
+import com.wipro.Employee_service.repo.EmployeeRepo;
+
+@Service
+public class EmployeeService {
+	
+	@Autowired
+	EmployeeRepo repo;
+
+	public Employee getEmployeeByUsername(String username) {
+		Employee emp=repo.findByUsername(username);
+		if(emp!=null) {
+			return emp;
+		}
+		return null;
+	}
+
+	public List<Employee> getEmployees() {
+		List<Employee> emp=repo.getEmployees();
+		List<Employee> allEmp=new ArrayList<>();
+		for(Employee activeEmployee: emp)
+		{
+
+				allEmp.add(activeEmployee);
+
+		}
+		return allEmp;
+	
+	}
+
+	public Employee getEmployeesById(Long empId) {
+		Employee emp=repo.findById(empId).get();
+		return emp;
+		
+	}
+
+	public Employee saveEmploye(Employee empData) {
+		Employee employee=repo.save(empData);
+		return employee;
+		
+	}
+
+	public void deleteEmployeeById(Long empId) {
+		Employee empDelete= getEmployeesById(empId);
+		repo.delete(empDelete);
+		
+	}
+
+	public void updateEmployee(Employee empData, Long empId) {
+		Employee emp=repo.findById(empId).get();
+		empData.setEmpId(emp.getEmpId());
+		saveEmploye(empData);
+		
+	}
+
+}

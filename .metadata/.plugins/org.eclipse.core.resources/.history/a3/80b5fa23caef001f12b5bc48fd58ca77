@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Employee-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true  # Forces service to fail if Config Server is unreachable
+      retry:
+        initial-interval: 1000
+        max-attempts: 5
+        multiplier: 1.5
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Ensure driver is specified
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect

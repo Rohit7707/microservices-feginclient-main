@@ -1,0 +1,9 @@
+package com.wipro.Project_service.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="Employee-service",url="http://localhost:9099/employee")
+public interface EmployeeClient {
+	
+
+}

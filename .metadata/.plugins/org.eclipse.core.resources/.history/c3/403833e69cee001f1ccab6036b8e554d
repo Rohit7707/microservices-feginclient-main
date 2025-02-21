@@ -1,0 +1,21 @@
+package com.wipro.Employee_service.service;
+
+import org.springframework.stereotype.Service;
+
+import com.wipro.Employee_service.controller.List;
+import com.wipro.Employee_service.entity.Employee;
+
+@Service
+public class EmployeeService {
+
+	public Employee getEmployeeByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
