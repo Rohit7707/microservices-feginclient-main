@@ -25,7 +25,7 @@ public class ProjectController {
     }
     
     @GetMapping("withEmployee/{pid}")
-    public Fullresponse findprojectByPid(@PathVariable("id") int pid){
+    public Fullresponse findprojectByPid(@PathVariable("pid") int pid){
         return service.findprojectByPid(pid);
     }
 

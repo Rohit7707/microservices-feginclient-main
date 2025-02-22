@@ -26,11 +26,11 @@ public class EmployeeController {
 	}
 	
 
-	@GetMapping("/withProject/{pid}")
-	public List<Employee> getEmployeesbyPid(@Nullable @RequestParam String pid )
+	@GetMapping("/project/{pid}")
+	public List<Employee> getEmployeesbyPid(@PathVariable int pid )
 	{
 		
-		return service.getEmployeesByPid(Integer.valueOf(pid));
+		return service.getEmployeesByPid(pid);
 		
 	}
 	
